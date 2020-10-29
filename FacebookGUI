@@ -1,0 +1,136 @@
+package facebookgui;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+
+
+public class FXMLDocumentController implements Initializable {
+    
+    @FXML
+    private Label label;
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event) {
+        System.out.println("You clicked me!");
+        label.setText("Hello World!");
+    }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+    
+}
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="facebookgui.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane layoutY="72.0" prefHeight="457.0" prefWidth="723.0" style="-fx-background-color: #DFE3EE;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <children>
+            <Text fill="#616771" layoutX="31.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connect with friends and the world around you on facebook. " wrappingWidth="242.4830722808838">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#616771" layoutX="370.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up ">
+               <font>
+                  <Font name="Tahoma Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="#616771" layoutX="370.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's free and always will be.">
+               <font>
+                  <Font name="Tahoma" size="10.0" />
+               </font>
+            </Text>
+            <TextField layoutX="370.0" layoutY="73.0" promptText="First Name " style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font name="Tahoma Bold" size="10.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="547.0" layoutY="73.0" style="-fx-background-color: #ffffff;" />
+            <TextField layoutX="372.0" layoutY="114.0" prefHeight="26.0" prefWidth="327.0" promptText="Mobile number or email " style="-fx-background-color: #ffffff;" />
+            <TextField layoutX="372.0" layoutY="154.0" prefHeight="26.0" prefWidth="327.0" promptText="New Password " style="-fx-background-color: #ffffff;" />
+            <Text fill="#616771" layoutX="374.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthday" wrappingWidth="112.48307228088379" />
+            <DatePicker layoutX="371.0" layoutY="221.0" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #fffff;">
+               <effect>
+                  <Blend />
+               </effect>
+            </DatePicker>
+            <RadioButton layoutX="372.0" layoutY="263.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Female " />
+            <RadioButton layoutX="481.0" layoutY="263.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" text="Male" />
+            <Text fill="#616771" layoutX="536.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Why do I need to provide my birthday ?" wrappingWidth="186.79296875">
+               <font>
+                  <Font name="Tahoma" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#616771" layoutX="372.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By clicking Create Account, you agree to our Terms and that you have read our Data Policy, inluding our Cookie Use. You may recieve SMS Notifications from Facebook and can opt out at any time. " wrappingWidth="327.00000000000006">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <ToggleButton layoutX="372.0" layoutY="376.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="158.0" style="-fx-background-color: #50c878;" text="Create Account " textFill="WHITE">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </ToggleButton>
+            <Text layoutX="31.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="See photos and updates from friends in News Feed. " />
+            <Text layoutX="31.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Share what's new in your life on your Timeline. " />
+            <Text layoutX="31.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find more of what you're looking  for with Facebook Search. " wrappingWidth="302.6796569824219" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="72.0" prefWidth="723.0" style="-fx-background-color: #4267B2;">
+         <children>
+            <Text fill="WHITE" layoutX="35.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="facebook" wrappingWidth="220.87109375">
+               <font>
+                  <Font name="Tahoma Bold" size="29.0" />
+               </font>
+            </Text>
+            <PasswordField layoutX="514.0" layoutY="26.0" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #ffffff;" />
+            <TextField layoutX="369.0" layoutY="26.0" prefHeight="12.0" prefWidth="120.0" style="-fx-background-color: #ffffff;" />
+            <Text fill="WHITE" layoutX="369.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email or  Phone ">
+               <font>
+                  <Font name="Tahoma Bold" size="10.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="514.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password ">
+               <font>
+                  <Font name="Tahoma Bold" size="10.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="514.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot account?" wrappingWidth="101.89974212646484">
+               <font>
+                  <Font name="Tahoma" size="8.0" />
+               </font>
+            </Text>
+            <ToggleButton accessibleRole="BUTTON" layoutX="644.0" layoutY="22.0" minHeight="18.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="69.0" style="-fx-background-color: #4267B2;" text="Log In" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma Bold" size="10.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
